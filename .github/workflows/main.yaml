@@ -1,0 +1,30 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Paso 1: InfraConfig (Configuración de infraestructura)
+      - name: Configurar infraestructura
+        uses: ./actions/infra-config
+
+      # Paso 2: Build (Construcción de la aplicación)
+      - name: Build
+        run: echo "Building"
+
+      # Paso 3: Deploy (Despliegue de la aplicación)
+      - name: Deploy
+        run: echo "Deploying"
+
+      # Paso 4: Tests (Ejecutar tests)
+      - name: Ejecutar tests
+        uses: ./actions/tests
+        with:
+          param1: 'Test1'
+          param2: 'Test2'
