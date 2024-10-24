@@ -8,6 +8,7 @@ Este taller tiene como objetivo externalizar la configuración de infraestructur
 
 La estructura de carpetas del proyecto es la siguiente:
 
+```yaml
 .
 ├── .github
 │   └── workflows
@@ -20,7 +21,7 @@ La estructura de carpetas del proyecto es la siguiente:
 │       ├── action.yml
 │       └── entrypoint.sh
 └── README.md
-
+```
 
 ### 1. Action Custom: InfraConfig
 La Action **InfraConfig** se encarga de configurar la infraestructura necesaria para la aplicación. Su única funcionalidad es imprimir un mensaje que indica que la infraestructura está siendo configurada.
