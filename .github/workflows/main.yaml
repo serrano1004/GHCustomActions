@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Paso 0: Clonar el código del repositorio
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       # Paso 1: InfraConfig (Configuración de infraestructura)
       - name: Configurar infraestructura
         uses: ./actions/infra-config
